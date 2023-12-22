@@ -10,5 +10,5 @@ eureka:
 # Spring Security configuration
 okta:
   oauth2:
-    issuer: https://dev-42887115.okta.com/oauth2/default
+    issuer-uri: https://dev-42887115.okta.com/oauth2/default
     audience: api://default
