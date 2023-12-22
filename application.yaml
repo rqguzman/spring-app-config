@@ -12,12 +12,21 @@ eureka:
 #   oauth2:
 #     issuer-uri: https://dev-42887115.okta.com/oauth2/default
 #     audience: api://default
-security:
-  oauth2:
-    resourceserver:
-      jwt:
-        issuer-uri: https://dev-42887115.okta.com/oauth2/default
-    client:
-      provider:
-        okta:
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
           issuer-uri: https://dev-42887115.okta.com/oauth2/default
+#          jwk-set-uri: https://dev-42887115.okta.com/oauth2/default
+      client:
+        registration:
+          internal-client:
+            provider: okta
+            authorization-grant-type: client_credentials
+            scope: internal
+            client-id: 0oae256n03x4l31mH5d7
+            client-secret: cW6wk8xBrEhcFsLG15G0CWu_Hp7TSxIhanjWM5uiRVzB277_NvHqjXVyfcTE3chS
+        provider:
+          okta:
+            issuer-uri: https://dev-42887115.okta.com/oauth2/default
