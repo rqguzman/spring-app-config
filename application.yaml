@@ -8,7 +8,12 @@ eureka:
     service-url:
       defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
 # Spring Security configuration
-okta:
+# okta:
+#   oauth2:
+#     issuer-uri: https://dev-42887115.okta.com/oauth2/default
+#     audience: api://default
+security:
   oauth2:
-    issuer-uri: https://dev-42887115.okta.com/oauth2/default
-    audience: api://default
+    resourceserver:
+      jwt:
+        issuer-uri: https://dev-42887115.okta.com/oauth2/default
