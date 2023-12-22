@@ -17,3 +17,7 @@ security:
     resourceserver:
       jwt:
         issuer-uri: https://dev-42887115.okta.com/oauth2/default
+    client:
+      provider:
+        okta:
+          issuer-uri: https://dev-42887115.okta.com/oauth2/default
